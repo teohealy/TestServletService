@@ -11,41 +11,18 @@
     <servlet-class>servlet.GetIndexPageServlet</servlet-class>
   </servlet>
 
-  <!--  <servlet-mapping>-->
-  <!--    <servlet-name>GetIndexPageServlet</servlet-name>-->
-  <!--    <url-pattern>/hello</url-pattern>-->
-  <!--  </servlet-mapping>-->
 
+  <!--  FILTER FOR REQUEST-->
+  <filter>
+    <filter-name>EncodingRequestsFilter</filter-name>
+    <filter-class>servlet.EncodingRequestFilter</filter-class>
+  </filter>
 
-  <!--  SERVLET FOR ADDITION-->
-  <servlet>
-    <servlet-name>AddUserServlet</servlet-name>
-    <servlet-class>servlet.AddUserServlet</servlet-class>
-  </servlet>
+  <!--  FILTER FOR RESPONSE-->
+  <filter>
+    <filter-name>EncodingResponseFilter</filter-name>
+    <filter-class>servlet.EncodingResponseFilter</filter-class>
+  </filter>
 
-
-  <!--  SERVLET FOR DELETE-->
-  <servlet>
-    <servlet-name>DeleteUserServlet</servlet-name>
-    <servlet-class>servlet.DeleteUserServlet</servlet-class>
-  </servlet>
-
-  <!--  SERVLET FOR UPDATE-->
-  <servlet>
-    <servlet-name>UpdateUserServlet</servlet-name>
-    <servlet-class>servlet.UpdateUserServlet</servlet-class>
-  </servlet>
-
-  <!--  SERVLET FOR GETTING JSON-->
-  <servlet>
-    <servlet-name>JsonHandlerServlet</servlet-name>
-    <servlet-class>jsonservlet.JsonHandlerServlet</servlet-class>
-  </servlet>
-
-  <!--  SERVLET FOR POST JSON-->
-  <servlet>
-    <servlet-name>JsonFormServlet</servlet-name>
-    <servlet-class>jsonservlet.JsonFormServlet</servlet-class>
-  </servlet>
 
 </web-app>
