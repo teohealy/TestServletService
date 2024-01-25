@@ -7,22 +7,22 @@
 
   <!-- Start servlet -->
   <servlet>
-    <servlet-name>GetIndexPageServlet</servlet-name>
-    <servlet-class>servlet.GetIndexPageServlet</servlet-class>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>servlet.LoginServlet</servlet-class>
   </servlet>
 
 
-  <!--  FILTER FOR REQUEST-->
+  <!--  FILTER FOR SESSION-->
   <filter>
-    <filter-name>EncodingRequestsFilter</filter-name>
-    <filter-class>servlet.EncodingRequestFilter</filter-class>
+    <filter-name>AuthenticationFilter</filter-name>
+    <filter-class>filters.AuthenticationFilter</filter-class>
   </filter>
 
-  <!--  FILTER FOR RESPONSE-->
-  <filter>
-    <filter-name>EncodingResponseFilter</filter-name>
-    <filter-class>servlet.EncodingResponseFilter</filter-class>
-  </filter>
 
+  <!--  TEST SERVLET-->
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>servlet.TestServlet</servlet-class>
+  </servlet>
 
 </web-app>
